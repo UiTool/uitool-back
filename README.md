@@ -1,4 +1,4 @@
-# Dependência
+# Dependências
 
 Antes de iniciar a desenvolver será necessário realizar algumas configurações
 
