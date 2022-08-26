@@ -1,5 +1,5 @@
 import { app } from './app';
 
-const port = 4003 || process.env.PORT;
+const port = process.env.PORT || 4003;
 
 app.listen(port, () => console.log('🖌️  Server Online!'));
