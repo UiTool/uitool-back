@@ -3,7 +3,7 @@ import { app } from './app';
 const port = 4003 || process.env.PORT;
 
 app.get("/", (request: Request, response: Response) => {
-    return response.json({Message: 🖌️  Server Online!'});
+    return response.json({Message: '🖌️  Server Online!'});
 })
 
 app.listen(port, () => console.log('🖌️  Server Online!'));
