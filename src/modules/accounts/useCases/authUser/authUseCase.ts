@@ -1,9 +1,9 @@
-import { AppError } from '@errors/AppError';
 import { compare } from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 
 import auth from '../../../../config/auth';
 import { prisma } from '../../../../database/prismaClient';
+import { AppError } from '../../../../errors/AppError';
 
 interface IRequest {
   email: string;

@@ -1,6 +1,7 @@
-import { AppError } from '@errors/AppError';
 import { hash } from 'bcrypt';
-import { prisma } from 'database/prismaClient';
+
+import { prisma } from '../../../../database/prismaClient';
+import { AppError } from '../../../../errors/AppError';
 
 interface IRequest {
   email: string;
