@@ -1,7 +1,7 @@
 import { compare } from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 
-import auth from '../../../../config/auth';
+import auth from '../../../../configs/auth';
 import { prisma } from '../../../../database/prismaClient';
 import { AppError } from '../../../../errors/AppError';
 
