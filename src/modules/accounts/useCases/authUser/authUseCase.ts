@@ -10,8 +10,16 @@ interface IRequest {
   password: string;
 }
 
+interface IResponse {
+  user: {
+    email: string;
+    name: string;
+  };
+  token: string;
+}
+
 export class AuthUseCase {
-  async execute({ email, password }: IRequest) {
+  async execute({ email, password }: IRequest): Promise<IResponse> {
     const user = await prisma.users.findFirst({
       where: {
         email,
@@ -33,6 +41,14 @@ export class AuthUseCase {
       expiresIn: '1d',
     });
 
-    return token;
+    const userResponse = {
+      user: {
+        email: user.email,
+        name: user.name,
+      },
+      token,
+    };
+
+    return userResponse;
   }
 }

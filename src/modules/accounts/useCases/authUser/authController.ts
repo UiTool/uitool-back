@@ -7,11 +7,12 @@ export class AuthController {
     const { email, password } = request.body;
     const authUseCase = new AuthUseCase();
 
-    const token = await authUseCase.execute({
+    const res = await authUseCase.execute({
       email,
       password,
     });
 
-    return response.json(token);
+    console.log(res);
+    return response.json(res);
   }
 }
