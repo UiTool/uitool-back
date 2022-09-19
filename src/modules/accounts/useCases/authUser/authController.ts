@@ -12,7 +12,6 @@ export class AuthController {
       password,
     });
 
-    console.log(res);
     return response.json(res);
   }
 }
