@@ -1,9 +1,9 @@
 import { resolve } from 'path';
-import { NodeMailProvider } from 'providers/nodemailer';
 import { v4 as uuidV4 } from 'uuid';
 
 import { prisma } from '../../../../database/prismaClient';
 import { AppError } from '../../../../errors/AppError';
+import { NodeMailProvider } from '../../../../providers/nodemailer';
 
 interface IRequest {
   email: string;
