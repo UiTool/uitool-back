@@ -20,3 +20,14 @@ model Users {
 
   @@map("users")
 }
+
+model Tools {
+  id          String   @id @default(uuid()) @map("_id")
+  name        String
+  description String
+  link        String
+  categories  String[]
+  tags        String[]
+
+  @@map("tools")
+}
