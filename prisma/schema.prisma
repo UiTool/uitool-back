@@ -14,7 +14,7 @@ model Users {
   id           String    @id @default(uuid()) @map("_id")
   email        String    @unique
   name         String
-  password     String
+  password     String?
   refreshToken String?
   expiresToken DateTime?
 

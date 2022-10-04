@@ -26,7 +26,7 @@ export class AuthUseCase {
       },
     });
 
-    if (!user) {
+    if (!user || !user.password) {
       throw new AppError('Email ou Password is incorrect');
     }
 
