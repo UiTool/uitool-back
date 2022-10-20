@@ -26,8 +26,22 @@ model Tools {
   name        String
   description String
   link        String
+  image       String
   categories  String[]
   tags        String[]
 
   @@map("tools")
+}
+
+type Answers {
+  answer String
+  tags   String[]
+}
+
+model Questions {
+  id       String    @id @default(uuid()) @map("_id")
+  question String
+  answers  Answers[]
+
+  @@map("questions")
 }

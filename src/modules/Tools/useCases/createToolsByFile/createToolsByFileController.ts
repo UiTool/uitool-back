@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import readline from 'readline';
 import { Readable } from 'stream';
 
-import { CreateToolsUseCase } from './createToolsUseCase';
+import { CreateToolsByFileUseCase } from './createToolsByFileUseCase';
 
 interface ITools {
   name: string;
@@ -12,7 +12,7 @@ interface ITools {
   tags: string[];
 }
 
-export class CreateToolsController {
+export class CreateToolsByFileController {
   async handle(request: Request, response: Response): Promise<Response> {
     const buffer = request.file?.buffer;
 
@@ -52,9 +52,9 @@ export class CreateToolsController {
       });
     }
 
-    const createToolsUseCase = new CreateToolsUseCase();
+    const createToolsByFileUseCase = new CreateToolsByFileUseCase();
 
-    await createToolsUseCase.execute(tools.slice(1));
+    await createToolsByFileUseCase.execute(tools.slice(1));
 
     return response.status(201).send();
   }

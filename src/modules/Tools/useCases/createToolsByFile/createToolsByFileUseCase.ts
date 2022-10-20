@@ -9,7 +9,7 @@ interface IRequest {
   tags: string[];
 }
 
-export class CreateToolsUseCase {
+export class CreateToolsByFileUseCase {
   async execute(toolsRequest: IRequest[]): Promise<void> {
     const tools: IRequest[] = [];
     // eslint-disable-next-line no-restricted-syntax

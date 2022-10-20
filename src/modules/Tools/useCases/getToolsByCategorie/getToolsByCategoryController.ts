@@ -4,7 +4,7 @@ import { GetToolsByCategoryUseCase } from './getToolsByCategoryUseCase';
 
 export class GetToolsByCategoryController {
   async handle(request: Request, response: Response): Promise<Response> {
-    const { category } = request.body;
+    const { category } = request.params;
 
     const getToolsByCategoryUseCase = new GetToolsByCategoryUseCase();
 
