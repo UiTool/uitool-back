@@ -10,6 +10,7 @@ interface ITools {
   link: string;
   categories: string[];
   tags: string[];
+  image: string;
 }
 
 export class CreateToolsByFileController {
@@ -49,6 +50,7 @@ export class CreateToolsByFileController {
         link: tool[2],
         categories,
         tags,
+        image: tool[5],
       });
     }
 

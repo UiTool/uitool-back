@@ -7,6 +7,7 @@ interface IRequest {
   link: string;
   categories: string[];
   tags: string[];
+  image: string;
 }
 
 export class CreateToolsByFileUseCase {
