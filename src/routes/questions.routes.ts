@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import { ensureAdmin } from 'middlewares/ensureAdmin';
+import { ensureAuthenticated } from 'middlewares/ensureAuthenticated';
 
 import { CreateQuestionController } from '../modules/Questions/useCases/createQuestion/createQuestionController';
 import { DeleteQuestionController } from '../modules/Questions/useCases/deleteQuestion/deleteQuestionController';
@@ -18,10 +20,25 @@ questionsRoutes.get('/:id', getQuestionByIdController.handle);
 
 questionsRoutes.get('/', getAllQuestionsController.handle);
 
-questionsRoutes.post('/', createQuestionController.handle);
+questionsRoutes.post(
+  '/',
+  ensureAuthenticated,
+  ensureAdmin,
+  createQuestionController.handle,
+);
 
-questionsRoutes.put('/:id', updateQuestionController.handle);
+questionsRoutes.put(
+  '/:id',
+  ensureAuthenticated,
+  ensureAdmin,
+  updateQuestionController.handle,
+);
 
-questionsRoutes.delete('/:id', deleteQuestionController.handle);
+questionsRoutes.delete(
+  '/:id',
+  ensureAuthenticated,
+  ensureAdmin,
+  deleteQuestionController.handle,
+);
 
 export { questionsRoutes };

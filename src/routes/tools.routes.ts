@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import { ensureAdmin } from 'middlewares/ensureAdmin';
+import { ensureAuthenticated } from 'middlewares/ensureAuthenticated';
 import multer from 'multer';
 
 import { CreateToolController } from '../modules/Tools/useCases/createTool/createToolController';
@@ -31,16 +33,33 @@ toolsRoutes.get('/tags', getToolsByTagsController.handle);
 
 toolsRoutes.get('/', getAllToolsController.handle);
 
-toolsRoutes.post('/', createToolController.handle);
+toolsRoutes.post(
+  '/',
+  ensureAuthenticated,
+  ensureAdmin,
+  createToolController.handle,
+);
 
 toolsRoutes.post(
   '/tools',
+  ensureAuthenticated,
+  ensureAdmin,
   multerConfig.single('toolsFile'),
   createToolsByFileController.handle,
 );
 
-toolsRoutes.put('/:id', updateToolController.handle);
+toolsRoutes.put(
+  '/:id',
+  ensureAuthenticated,
+  ensureAdmin,
+  updateToolController.handle,
+);
 
-toolsRoutes.delete('/:id', deleteToolController.handle);
+toolsRoutes.delete(
+  '/:id',
+  ensureAuthenticated,
+  ensureAdmin,
+  deleteToolController.handle,
+);
 
 export { toolsRoutes };

@@ -43,6 +43,8 @@ export class AuthUseCase {
 
     const userResponse = {
       user: {
+        id: user.id,
+        isAdmin: user.isAdmin,
         email: user.email,
         name: user.name,
       },

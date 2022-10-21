@@ -6,6 +6,9 @@
   "engines": {
     "node": "16.16.0"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/server.js",

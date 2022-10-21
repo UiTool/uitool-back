@@ -17,6 +17,7 @@ model Users {
   password     String?
   refreshToken String?
   expiresToken DateTime?
+  isAdmin      Boolean   @default(false)
 
   @@map("users")
 }
