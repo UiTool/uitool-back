@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { ensureAdmin } from 'middlewares/ensureAdmin';
-import { ensureAuthenticated } from 'middlewares/ensureAuthenticated';
 import multer from 'multer';
 
+import { ensureAdmin } from '../middlewares/ensureAdmin';
+import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 import { CreateToolController } from '../modules/Tools/useCases/createTool/createToolController';
 import { CreateToolsByFileController } from '../modules/Tools/useCases/createToolsByFile/createToolsByFileController';
 import { DeleteToolController } from '../modules/Tools/useCases/deleteTool/deleteToolController';

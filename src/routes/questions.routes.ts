@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { ensureAdmin } from 'middlewares/ensureAdmin';
-import { ensureAuthenticated } from 'middlewares/ensureAuthenticated';
 
+import { ensureAdmin } from '../middlewares/ensureAdmin';
+import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 import { CreateQuestionController } from '../modules/Questions/useCases/createQuestion/createQuestionController';
 import { DeleteQuestionController } from '../modules/Questions/useCases/deleteQuestion/deleteQuestionController';
 import { GetAllQuestionsController } from '../modules/Questions/useCases/getAllQuestions/getAllQuestionsController';
