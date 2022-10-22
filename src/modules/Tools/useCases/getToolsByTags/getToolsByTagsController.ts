@@ -4,12 +4,13 @@ import { GetToolsByTagsUseCase } from './getToolsByTagsUseCase';
 
 export class GetToolsByTagsController {
   async handle(request: Request, response: Response): Promise<Response> {
-    const { tags } = request.body;
+    const { tags } = request.params;
+    const tagsSearch = tags.split(',');
 
     const getToolsBytagsUseCase = new GetToolsByTagsUseCase();
 
     const tools = await getToolsBytagsUseCase.execute({
-      tags,
+      tags: tagsSearch,
     });
 
     return response.json(tools);

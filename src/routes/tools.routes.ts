@@ -29,7 +29,7 @@ toolsRoutes.get('/category/:category', getToolsByCategoryController.handle);
 
 toolsRoutes.get('/:id', getToolByIdController.handle);
 
-toolsRoutes.get('/tags', getToolsByTagsController.handle);
+toolsRoutes.get('/tags/:tags', getToolsByTagsController.handle);
 
 toolsRoutes.get('/', getAllToolsController.handle);
 
