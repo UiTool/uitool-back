@@ -4,9 +4,9 @@ import { hash } from 'bcrypt';
 const prisma = new PrismaClient();
 
 async function main() {
-  const password = await hash(process.env.PASSWORD_ADMIN || 'ADMIN123', 10);
-  const email = process.env.EMAIL_ADMIN || 'admin@email.com';
-  const name = process.env.NAME_ADMIN || 'ADMIN';
+  const password = await hash('adminUItool1@', 10);
+  const email = 'uitoolleris@gmail.com';
+  const name = 'Administrator Leris';
 
   const admin = await prisma.users.upsert({
     where: {

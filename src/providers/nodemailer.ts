@@ -7,11 +7,11 @@ class NodeMailProvider {
 
   constructor() {
     const transport = nodemailer.createTransport({
-      host: 'smtp.mailtrap.io',
-      port: 2525,
+      host: 'smtp.gmail.com',
+      port: 587,
       auth: {
-        user: '797f9503a6182b',
-        pass: '15b75d26cced9d',
+        user: process.env.NODEMAILER_USER,
+        pass: process.env.NODEMAILER_PASS,
       },
     });
 
