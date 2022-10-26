@@ -23,7 +23,7 @@ export class SendEmailForgotPasswordUseCase {
 
     const templatePath = `${
       __dirname.split('dist')[0]
-    }src/modules/account/emails`;
+    }src/modules/account/emails/emailForgotPassword.hbs`;
 
     const token = uuidV4();
 
