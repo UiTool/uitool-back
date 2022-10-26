@@ -22,8 +22,9 @@ export class SendEmailForgotPasswordUseCase {
     }
 
     const templatePath = resolve(
-      '/app/dist/',
-      'emails/emailForgotPassword.hbs',
+      __dirname,
+      'emails',
+      'emailForgotPassword.hbs',
     );
 
     const token = uuidV4();
