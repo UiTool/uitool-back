@@ -21,11 +21,9 @@ export class SendEmailForgotPasswordUseCase {
       throw new AppError('User not found!');
     }
 
-    const templatePath = resolve(
-      __dirname,
-      'emails',
-      'emailForgotPassword.hbs',
-    );
+    const templatePath = `${
+      __dirname.split('dist')[0]
+    }/src/modules/account/emails`;
 
     const token = uuidV4();
 
