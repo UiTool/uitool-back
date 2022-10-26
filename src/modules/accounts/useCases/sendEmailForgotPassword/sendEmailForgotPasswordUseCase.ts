@@ -22,8 +22,8 @@ export class SendEmailForgotPasswordUseCase {
     }
 
     const templatePath = resolve(
-      __dirname,
-      '.',
+      '..',
+      '..',
       'emails',
       'emailForgotPassword.hbs',
     );
