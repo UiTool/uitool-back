@@ -25,6 +25,7 @@ export class SendEmailForgotPasswordUseCase {
       __dirname,
       '..',
       '..',
+      '..',
       'emails',
       'emailForgotPassword.hbs',
     );
