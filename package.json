@@ -4,7 +4,7 @@
   "description": "API For server euxt application",
   "author": "Beets Jr",
   "license": "ISC",
-  "main": "/dist/src/server.js",
+  "main": "src/server.js",
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/src/server.js",
