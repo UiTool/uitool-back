@@ -1,7 +1,9 @@
 {
-  "name": "backend",
+  "name": "api-euxt",
   "version": "1.0.0",
-  "description": "",
+  "description": "API For server euxt application",
+  "author": "Beets Jr",
+  "license": "ISC",
   "main": "/dist/src/server.js",
   "scripts": {
     "build": "tsc",
@@ -11,9 +13,6 @@
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@prisma/client": "^4.4.0",
     "bcrypt": "^5.0.1",
