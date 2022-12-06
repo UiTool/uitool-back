@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "16.16.0"
+    "node": "18.x"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --output public",
     "start": "node ./dist/src/server.js",
     "dev": "ts-node-dev -r tsconfig-paths/register --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
   },
